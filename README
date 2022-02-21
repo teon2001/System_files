@@ -1,0 +1,26 @@
+NECULA ANDREEA 323 CD
+
+    Am folosit pentru implemetarea temei fisierul tema1.c in care am scris
+functiile cerute si inca 2 fisiere care au legatura cu structura de date: list.
+(list.h - fisierul header si list.c - cu implemenatrea listei)
+    Signatura functiilor din list.c spun exact ce fac.
+    Functia touch, mkdir si rm au cam aceeasi structura, in sensul ca trebuie
+sa verific daca exista sau nu fisierul respectiv in sistem si dupa execut 
+stergere sau adaugare din/in sistem.
+    Rmdir este mai special pentru ca trebuia sa staerga in adancime tot ce
+contine un director, si sa refaca legaturile cu parintele diretorului pe
+care vreau sa-l sterg. De mentionat, am folost o functie f(numele nu e sugestiv),
+insa imi place sa spun ca "aplic o functie f peste un sistem"(ca la mate)
+si ce face functia mea f este ca reface legaturile cu parintele directorului 
+pe care il sterg, acest parinte pointand acum la vecinul directorului de sters.
+    Pentru cd am folosit multe verificari de existenta ale unui fisier/director.
+    In pwd am parcurs in sens invers pana la home si am pus numele, in vector,
+dupa care am lipit un / la nume si le am afisat invers
+    Pentru tree am folsit o varinata recursiva, am parcurs subdirectoarele
+dir.ului curent si le-am afisat, apeland recursiv pentru copiii subdirectoarelor
+si tot asa, intrebandu-ma la final daca are si fisire directorul respectiv,
+afisandu-le si pe ele. Functia get_space imi generaza spatii.
+    Functia mv este plina de verificari de existenta a unor fisiere/directoare, 
+dupa care in cazul posibil, am schimbat numele.
+    Pentru eliberarea memoriei am facut o functie free_ierarchy care este
+apeleaza de fapt delete_dirs cu parintele home;
